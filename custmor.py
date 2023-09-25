@@ -15,6 +15,10 @@ class Customer:
         else:
             return 1200
 
+    def info_csv(self):
+        csv_string = self.full_name() + "," + str(self.age) + "," + str(self.entry_fee())
+        return csv_string
+
     # def full_name(self):
     #     return self.name
 
