@@ -3,18 +3,16 @@ class Customer:
         self.name = first_name + " " + family_name
         self.age = age
 
-        if age < 20:
-            self.money = 1000
-        elif 20 <= age < 65:
-            self.money = 1500
-        elif 65 <= age:
-            self.money = 1200
-
     def full_name(self):
         return self.name
 
     def entry_fee(self):
-        return self.money
+        if self.age < 20:
+            return 1000
+        elif 20 <= self.age < 65:
+            return 1500
+        else:
+            return 1200
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)

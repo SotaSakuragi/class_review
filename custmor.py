@@ -7,6 +7,14 @@ class Customer:
     def full_name(self):
         return self.first_name + " " + self.family_name
 
+    def entry_fee(self):
+        if self.age < 20:
+            return 1000
+        elif 20 <= self.age < 65:
+            return 1500
+        else:
+            return 1200
+
     # def full_name(self):
     #     return self.name
 
@@ -23,7 +31,7 @@ tom = Customer(first_name="Tom", family_name="Ford")
 tom.full_name()  # "Tom Ford" という値を返す
 print(tom.full_name())
 """
-
+"""
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
 ken.age  # 15 という値を返す
 print(ken.age)
@@ -35,9 +43,9 @@ print(tom.age)
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
 ieyasu.age  # 73 という値を返す
 print(ieyasu.age)
-
-
 """
+
+
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
 ken.entry_fee()  # 1000 という値を返す
 print(ken.entry_fee())
@@ -49,7 +57,7 @@ print(tom.entry_fee())
 ieyasu = Customer(first_name="Ieyasu", family_name="Tokugawa", age=73)
 ieyasu.entry_fee()  # 1200 という値を返す
 print(ieyasu.entry_fee())
-"""
+
 
 # ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
 # ken.info_csv()  # "Ken Tanaka,15,1000" という値を返す
