@@ -1,10 +1,11 @@
 class Customer:
     def __init__(self, first_name, family_name, age):
-        self.name = first_name + " " + family_name
+        self.first_name = first_name
+        self.family_name = family_name
         self.age = age
 
     def full_name(self):
-        return self.name
+        return self.first_name + " " + self.family_name
 
     def entry_fee(self):
         if self.age < 20:

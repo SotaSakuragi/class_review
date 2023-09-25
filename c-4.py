@@ -3,13 +3,6 @@ class Customer:
         self.name = first_name + " " + family_name
         self.age = age
 
-        if age < 20:
-            self.money = 1000
-        elif 20 <= age < 65:
-            self.money = 1500
-        elif 65 <= age:
-            self.money = 1200
-
     def info_csv(self):
         self.csv = self.name + "," + str(self.age) + "," + str(self.money)
         return self.csv
