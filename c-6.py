@@ -1,24 +1,27 @@
 class Customer:
     def __init__(self, first_name, family_name, age):
-        self.name = first_name + " " + family_name
+        self.first_name = first_name
+        self.family_name = family_name
         self.age = age
 
-        if age <= 3:
-            self.money = "無料"
-        elif age < 20:
-            self.money = 1000
-        elif 20 <= age < 65:
-            self.money = 1500
-        elif 65 <= age < 75:
-            self.money = 1200
-        elif 75 <= age:
-            self.money = 500
-
     def full_name(self):
-        return self.name
+        return self.first_name + " " + self.family_name
 
     def entry_fee(self):
-        return self.money
+        if self.age <= 3:
+            return "無料"
+        elif self.age < 20:
+            return 1000
+        elif 20 <= self.age < 65:
+            return 1500
+        elif 65 <= self.age < 75:
+            return 1200
+        else:
+            return 500
+
+    def info_csv(self):
+        csv_string = self.full_name() + "," + str(self.age) + "," + str(self.entry_fee())
+        return csv_string
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
