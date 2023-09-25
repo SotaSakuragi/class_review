@@ -1,18 +1,10 @@
 class Customer:
-    def __init__(self, first_name, family_name, age):
-        self.name = first_name + " " + family_name
-        self.age = age
+    def __init__(self, first_name, family_name):
+        self.first_name = first_name
+        self.family_name = family_name
 
-        if age < 20:
-            self.money = 1000
-        elif 20 <= age < 65:
-            self.money = 1500
-        elif 65 <= age:
-            self.money = 1200
-
-    def info_csv(self):
-        self.csv = self.name + "," + str(self.age) + "," + str(self.money)
-        return self.csv
+    def full_name(self):
+        return self.first_name + " " + self.family_name
 
     # def full_name(self):
     #     return self.name
