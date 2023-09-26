@@ -20,8 +20,8 @@ class Customer:
             return 500
 
     def info_tab(self):
-        csv_string = self.full_name() + "  " + str(self.age) + "  " + str(self.entry_fee())
-        return csv_string
+        string = self.full_name() + "  " + str(self.age) + "  " + str(self.entry_fee())
+        return string
 
 
 ken = Customer(first_name="Ken", family_name="Tanaka", age=15)
