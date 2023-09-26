@@ -20,6 +20,7 @@ class Customer:
             return 500
 
     def info_pipe(self):
+        # ここにあったcsvかな？
         string = self.full_name() + "  " + str(self.age) + "  " + str(self.entry_fee())
         return string
 
